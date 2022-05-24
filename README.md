@@ -6,4 +6,6 @@ This is my customr .vimrc configuration for Vim.
 This is my custom .bashrc configuration for Bash.
 
 Hello how are you
+i'm good 
+
 
