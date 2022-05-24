@@ -1,0 +1,30 @@
+export PATH=$PATH:.
+#this tells your shell to automatically look in your current directory for scripts, and you don't have to type ./ 
+alias ls="ls --color"
+#this makes it so everytime you run ls, you are running ls --color, overwrites, shows pretty colors
+alias cdd="cd.."
+
+#there is no difference between this and a script
+
+
+#create 2 functions
+#why not alias? why function? alias might have problems
+
+#archives and packs everything
+function targzfunc() {
+	VAR=$1;
+	VAR=${VAR%/};
+	tar -zcvf "$VAR.tar.gz" ./"$VAR"
+}
+
+#extract it
+function untarfunc() {
+	VAR=$1
+	VAR=${VAR}
+	tar -xvf ./"$VAR"
+}	
+
+alias targz=targzfunc
+alias untar=untarfunc
+
+
